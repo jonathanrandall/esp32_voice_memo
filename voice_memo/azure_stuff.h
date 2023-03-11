@@ -8,7 +8,7 @@
 //#include "C:\Users\jonny\Documents\Arduino\libraries\ArduinoJson-5.13.5\ArduinoJson.h"
 
 const char *ssid = "WiFi-C5BF";
-const char *password = "*****";
+const char *password = "***";
 bool reconnect = false;
 const char *text;
 
@@ -68,7 +68,7 @@ void translate(int lang ){
   //uri = "https://australiaeast.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=en-US";
  
   String endpoint = "https://api.cognitive.microsofttranslator.com/";
-  String subscriptionKey = "*******";
+  String subscriptionKey = "***";
   String location="australiaeast";
   String to_post;
   HTTPClient client;
@@ -130,7 +130,7 @@ void translate(int lang ){
 }
 
 void uploadFile(){
-  return;
+  
   wifi_connect();
   menu_struct *menu;
   menu = &fs_menu;
@@ -153,7 +153,7 @@ void uploadFile(){
   //const char *text;
 
   String endpoint = "https://myresource4.cognitiveservices.azure.com/";
-  String subscriptionKey = "*********";
+  String subscriptionKey = "****";
   
   String uri = "https://australiaeast.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=en-US";
   String location="australiaeast";
@@ -171,11 +171,14 @@ void uploadFile(){
   if(httpResponseCode == 200){
     display_ready();
     String response = client.getString();
+    Serial.println(response);
+    //{"RecognitionStatus":"Success","Offset":5100000,"Duration":72400000,"DisplayText":"We are from Earth. We come in peace."}
     Serial.println("==================== Transcription ====================");
     //display.println(response);
     // Parse the json response: Arduino assistant
     deserializeJson(doc, response);
     //JsonObject& doc = jsonBuffer.parseObject(response);
+
 
     // if (!doc.success()) {
     //   Serial.println("JSON parsing failed!");
