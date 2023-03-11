@@ -3,7 +3,7 @@
 
 An ESP32 voice memo recorder with azure powered speech to text and language translation… looks like we can finally finish building that great big tower we started on all those centuries ago.
 
-In this video, I give an explanation of how I made this, including a description of the code used. The YouTube instrucitonal video is at  
+In this video, I give an explanation of how I made this, including a description of the code used. The YouTube instrucitonal video is at https://youtu.be/l0EJ3O9tus8 
 
 ## The pin connections are as follows:
 __SD Card (SPI bus):__   SCK -> 18, MOSI -> 23, MISO -> 19, CS -> 5
